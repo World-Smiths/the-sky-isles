@@ -14,3 +14,9 @@
 
 # OSX
 .DS_Store
+
+# Database files
+chat.db
+drawings.db
+fog.db
+settings.db
