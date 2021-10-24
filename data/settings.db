@@ -1,0 +1,5 @@
+{"key":"df-architect.data-version","value":"{\"core\":\"0.8.9\",\"arch\":\"3.0.2\"}","_id":"4Bq8FNpPBtcahm6v"}
+{"_id":"admfEY5jgEMLmjJ1","key":"dnd5e.systemMigrationVersion","value":"\"1.5.3\""}
+{"key":"core.permissions","value":"{\"ACTOR_CREATE\":[3,4],\"BROADCAST_AUDIO\":[2,3,4],\"BROADCAST_VIDEO\":[2,3,4],\"DRAWING_CREATE\":[2,3,4],\"ITEM_CREATE\":[3,4],\"FILES_BROWSE\":[2,3,4],\"FILES_UPLOAD\":[3,4],\"JOURNAL_CREATE\":[2,3,4],\"MACRO_SCRIPT\":[1,2,3,4],\"MESSAGE_WHISPER\":[1,2,3,4],\"NOTE_CREATE\":[2,3,4],\"SETTINGS_MODIFY\":[3,4],\"SHOW_CURSOR\":[1,2,3,4],\"SHOW_RULER\":[1,2,3,4],\"TEMPLATE_CREATE\":[1,2,3,4],\"TOKEN_CREATE\":[3,4],\"TOKEN_CONFIGURE\":[2,3,4],\"WALL_DOORS\":[1,2,3,4]}","_id":"cRfEROqifgjeMEoG"}
+{"key":"core.time","value":"0","_id":"rOt4UywxjUwWO7tJ"}
+{"_id":"xYG2UWuqiRwpOxvR","key":"core.moduleConfiguration","value":"{\"dcm\":false,\"df-architect\":true,\"df-curvy-walls\":true,\"colorsettings\":true,\"lib-df-hotkeys\":true,\"scene-packer\":true,\"lib-wrapper\":true,\"acelib\":false,\"jce\":false,\"_document-sheet-registrar\":false,\"quick-encounters\":false,\"wst\":true,\"wall-height\":true,\"compendium-folders\":false}"}
