@@ -15,8 +15,14 @@
 # OSX
 .DS_Store
 
-# Database files
+# Never needed database files
 chat.db
 drawings.db
 fog.db
 settings.db
+users.db
+
+# Not used in this world database files
+combats.db
+playlists.db
+tables.db
