@@ -1,8 +1,11 @@
 # Amazing Encounters & Places: The Sky Isles
 
 **System:** D&D 5e
+
 **Starting Level:** Any
+
 **Length:** Short multi-session (10-12 hours)
+
 **Language:** English
 
 Take your party to gorgeous earth motes high above the clouds, inhabited by monks from the Order of the Phoenix. Meet the docile winged leopards, scale the floating islands, learn about their culture. But don’t fall!
