@@ -10,6 +10,8 @@
 
 Take your party to gorgeous earth motes high above the clouds, inhabited by monks from the Order of the Phoenix. Meet the docile winged leopards, scale the floating islands, learn about their culture. But don’t fall!
 
+This is a preview for the [Amazing Encounters & Places Kickstarter](https://www.kickstarter.com/projects/2071391541/amazing-encounters-and-places-vol-1-5e) by [CZRPG](https://czrpg.com/).
+
 ## Installation
 
 You can install this from within FoundryVTT or using the links and files on the [World Smiths website](https://world-smiths.github.io/page)
@@ -23,7 +25,7 @@ Want to contribute to this world or similar projects?
 
 ## Dependencies
 
-* [Scene Packer](https://foundryvtt.com/packages/scene-packer) is used to unpack the compendiums, provide with folder structure in the Sidebar, and take care of re-linking of Documents.
+* [Scene Packer](https://foundryvtt.com/packages/scene-packer) is used in the module version to unpack the compendiums, provide with folder structure in the Sidebar, and take care of re-linking of Documents.
 * [Wall Height](https://foundryvtt.com/packages/wall-height) allows for a more dynamic experience on the "The Way Up" scene. Make sure you know how to [adjust token elevation](https://foundryvtt.com/article/tokens)!
 
 ## Credits
