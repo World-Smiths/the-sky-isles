@@ -48,14 +48,6 @@
   "system": "dnd5e",
   "dependencies": [
     {
-      "name": "scene-packer",
-      "type": "module"
-    },
-    {
-      "name": "quick-encounters",
-      "type": "module"
-    },
-    {
       "name": "wall-height",
       "type": "module"
     }
