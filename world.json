@@ -54,6 +54,34 @@
   "socket": false,
   "manifest": "https://github.com/world-smiths/the-sky-isles/releases/latest/download/world.json",
   "download": "https://github.com/world-smiths/the-sky-isles/releases/latest/download/world.zip",
+  "media": [
+     {
+      "type": "screenshot",
+      "url": "https://user-images.githubusercontent.com/82790112/138794786-f839e9da-b43f-4767-af50-016f00e4250c.png",
+      "caption": "Log-in screen"
+    },
+    {
+      "type": "screenshot",
+      "url": "https://user-images.githubusercontent.com/82790112/138880390-695d00e5-23ed-4c7d-85ed-da693b16cc83.gif",
+      "caption": "The Skywalk"
+    },
+    {
+      "type": "screenshot",
+      "url": "https://media.discordapp.net/attachments/892517753905365002/902358803331301426/unknown.png",
+      "caption": "Landing page"
+    },
+    {
+      "type": "screenshot",
+      "url": "https://user-images.githubusercontent.com/82790112/138797534-3d18a62c-d06d-4114-b557-9dead1979ada.gif",
+      "caption": "The Fiery Incantation"
+    },
+    {
+      "type": "video",
+      "url": "https://user-images.githubusercontent.com/82790112/138928725-162b9ab3-b415-4026-8e6f-c2fd7bd77b8a.mp4",
+      "loop": true,
+      "caption": "Wall Height is used on The Way Up"
+    }
+  ],
   "protected": false,
   "background": "worlds/the-sky-isles/scenes/backgrounds/cover.webp",
   "coreVersion": "0.8.9",
