@@ -18,6 +18,8 @@ This is a preview for the [Amazing Encounters & Places Kickstarter](https://www.
 
 ![landing](https://media.discordapp.net/attachments/892517753905365002/902358803331301426/unknown.png)
 
+![incantation](https://user-images.githubusercontent.com/82790112/138797534-3d18a62c-d06d-4114-b557-9dead1979ada.gif)
+
 ## Installation
 
 You can install this from within FoundryVTT or using the links and files on the [World Smiths website](https://world-smiths.github.io/page)
