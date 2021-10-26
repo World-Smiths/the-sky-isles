@@ -14,7 +14,7 @@ This is a preview for the [Amazing Encounters & Places Kickstarter](https://www.
 
 ![login](https://user-images.githubusercontent.com/82790112/138794786-f839e9da-b43f-4767-af50-016f00e4250c.png)
 
-![skywalk](https://user-images.githubusercontent.com/82790112/138794759-b72008f9-ff03-4bca-aa7f-7eb1604e2d6d.gif)
+![skywalk](https://user-images.githubusercontent.com/82790112/138880390-695d00e5-23ed-4c7d-85ed-da693b16cc83.gif)
 
 ![landing](https://media.discordapp.net/attachments/892517753905365002/902358803331301426/unknown.png)
 
