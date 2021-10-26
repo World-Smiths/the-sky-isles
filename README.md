@@ -12,6 +12,12 @@ Take your party to gorgeous earth motes high above the clouds, inhabited by monk
 
 This is a preview for the [Amazing Encounters & Places Kickstarter](https://www.kickstarter.com/projects/2071391541/amazing-encounters-and-places-vol-1-5e) by [CZRPG](https://czrpg.com/).
 
+![login](https://user-images.githubusercontent.com/82790112/138794786-f839e9da-b43f-4767-af50-016f00e4250c.png)
+
+![skywalk](https://user-images.githubusercontent.com/82790112/138794759-b72008f9-ff03-4bca-aa7f-7eb1604e2d6d.gif)
+
+![landing](https://media.discordapp.net/attachments/892517753905365002/902354924896149504/Landing_Page.webp)
+
 ## Installation
 
 You can install this from within FoundryVTT or using the links and files on the [World Smiths website](https://world-smiths.github.io/page)
