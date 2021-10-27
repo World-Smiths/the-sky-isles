@@ -14,11 +14,13 @@ This is a preview for the [Amazing Encounters & Places Kickstarter](https://www.
 
 ![login](https://user-images.githubusercontent.com/82790112/138794786-f839e9da-b43f-4767-af50-016f00e4250c.png)
 
-![skywalk](https://user-images.githubusercontent.com/82790112/138794759-b72008f9-ff03-4bca-aa7f-7eb1604e2d6d.gif)
+![skywalk](https://user-images.githubusercontent.com/82790112/138880390-695d00e5-23ed-4c7d-85ed-da693b16cc83.gif)
 
 ![landing](https://media.discordapp.net/attachments/892517753905365002/902358803331301426/unknown.png)
 
 ![incantation](https://user-images.githubusercontent.com/82790112/138797534-3d18a62c-d06d-4114-b557-9dead1979ada.gif)
+
+https://user-images.githubusercontent.com/82790112/138928725-162b9ab3-b415-4026-8e6f-c2fd7bd77b8a.mp4
 
 ## Installation
 
@@ -52,4 +54,7 @@ Want to contribute to this world or similar projects?
 ## License
 
 This adventure content is offered and may be used under the terms of the [Open Gaming License v1.0a](./OGL.txt) and [Dungeon and Dragons 5th Edition's Systems Reference Document 5.1 (SRD5)](https://media.wizards.com/2016/downloads/DND/SRD-OGL_V5.1.pdf).
+The maps were created by [CZRPG](https://czrpg.com/) and are used with express permission. 
+The World Smiths logo is under the license [here](https://github.com/World-Smiths/documentation#license).
+All other art assets are provided by [CZRPG](https://czrpg.com/) who has license to use them commercially.
 The software component of this world is distributed under the [MIT](./LICENSE) license.
