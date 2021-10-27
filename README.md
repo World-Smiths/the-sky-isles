@@ -54,4 +54,7 @@ Want to contribute to this world or similar projects?
 ## License
 
 This adventure content is offered and may be used under the terms of the [Open Gaming License v1.0a](./OGL.txt) and [Dungeon and Dragons 5th Edition's Systems Reference Document 5.1 (SRD5)](https://media.wizards.com/2016/downloads/DND/SRD-OGL_V5.1.pdf).
+The maps were created by [CZRPG](https://czrpg.com/) and are used with express permission. 
+The World Smiths logo is under the license [here](https://github.com/World-Smiths/documentation#license).
+All other art assets are provided by [CZRPG](https://czrpg.com/) who has license to use them commercially.
 The software component of this world is distributed under the [MIT](./LICENSE) license.
