@@ -67,7 +67,7 @@ img#logo:hover {
   color: white;
   background-repeat: repeat!important;
 }
-.ws-block .entity-link {
+.ws-block .entity-link, .ws-block .inline-roll {
   color: black;
 }
 
