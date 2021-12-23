@@ -11,6 +11,7 @@
 
 # Misc
 *.log
+.husky/
 
 # OSX
 .DS_Store
