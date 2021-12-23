@@ -16,7 +16,7 @@
 .DS_Store
 
 # Never needed database files
-chat.db
+messages.db
 drawings.db
 fog.db
 settings.db
@@ -26,3 +26,4 @@ users.db
 combats.db
 playlists.db
 tables.db
+cards.db
