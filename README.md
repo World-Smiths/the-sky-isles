@@ -10,7 +10,7 @@
 
 **Language:** English
 
-Take your party to gorgeous earth motes high above the clouds, inhabited by monks from the Order of the Phoenix. Meet the docile winged leopards, scale the floating islands, learn about their culture. But don’t fall!
+Take your party to gorgeous earth motes high above the clouds, inhabited by monks from the Order of the Phoenix. Meet the docile winged leopards, scale the floating islands, learn about their culture. But don't fall!
 
 This is a preview for the [Amazing Encounters & Places Kickstarter](https://www.kickstarter.com/projects/2071391541/amazing-encounters-and-places-vol-1-5e) by [CZRPG](https://czrpg.com/).
 
