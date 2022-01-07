@@ -16,6 +16,9 @@
 # OSX
 .DS_Store
 
+# Foundry VTT
+*.lock
+
 # Never needed database files
 messages.db
 drawings.db

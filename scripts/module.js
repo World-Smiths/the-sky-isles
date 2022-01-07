@@ -38,7 +38,7 @@ logo.onclick = () => window.open("https://world-smiths.github.io/page");
      * Set to the following to disable:
      *   const creaturePacks = [];
      */
-    const creaturePacks = ["the-sky-isles.actors", "dnd5e.monsters"];
+    const creaturePacks = ["the-sky-isles.actors"];
     /**
      * journalPacks is a list of compendium packs to look in for Journals by name (in prioritised order).
      * The first entry here assumes that you have a Journal pack in your module with the "name" of "journals".
@@ -71,7 +71,7 @@ logo.onclick = () => window.open("https://world-smiths.github.io/page");
      * Set to the following to disable:
      *   const additionalModulePacks = [];
      */
-    const additionalModulePacks = [];
+    const additionalModulePacks = ["dnd5e"];
 
     Hooks.once("scenePackerReady", ScenePacker => {
         // Initialise the Scene Packer with your adventure name and module name
