@@ -12,7 +12,7 @@ jobs:
 
       # Substitute the Manifest and Download URLs in the module.json
       - name: Substitute in Module Manifest
-        id: sub_module_manifest_link_version
+        id: sub_module_manifest
         uses: microsoft/variable-substitution@v1
         with:
           files: "module.json"
@@ -24,7 +24,7 @@ jobs:
 
       # Substitute the Manifest and Download URLs in the world.json
       - name: Substitute in World Manifest
-        id: sub_world_manifest_link_version
+        id: sub_world_manifest
         uses: microsoft/variable-substitution@v1
         with:
           files: "world.json"
@@ -40,7 +40,6 @@ jobs:
 
       # Create a release for this specific version
       - name: Update Release with Files
-        if: "!github.event.release.prerelease"
         id: create_version_release
         uses: ncipollo/release-action@v1
         with:
@@ -71,19 +70,21 @@ jobs:
 
       # Autopublish to the Foundry Admin panel
       - name: AutoPublish Module
+        if: "!github.event.release.prerelease"
         uses: Varriount/fvtt-autopublish@v1.0.6
         with:
           username: ${{ secrets.FOUNDRY_ADMIN_USER }}
           password: ${{ secrets.FOUNDRY_ADMIN_PW }}
-          module-id: ${{ secrets.FOUNDRY_ADMIN_ID }}
+          module-id: ${{ secrets.FOUNDRY_ADMIN_MODULE_ID }}
           manifest-url: https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/module.json
           manifest-file: ./module.json
 
       - name: AutoPublish World
+        if: "!github.event.release.prerelease"
         uses: Varriount/fvtt-autopublish@v1.0.6
         with:
           username: ${{ secrets.FOUNDRY_ADMIN_USER }}
           password: ${{ secrets.FOUNDRY_ADMIN_PW }}
-          module-id: ${{ secrets.FOUNDRY_ADMIN_ID }}
+          module-id: ${{ secrets.FOUNDRY_ADMIN_WORLD_ID }}
           manifest-url: https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/world.json
           manifest-file: ./world.json
