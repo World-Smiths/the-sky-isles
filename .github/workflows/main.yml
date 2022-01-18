@@ -13,6 +13,7 @@ jobs:
       # Substitute the Manifest and Download URLs in the module.json
       - name: Substitute in Module Manifest
         id: sub_module_manifest
+        if: "!github.event.release.prerelease"
         uses: microsoft/variable-substitution@v1
         with:
           files: "module.json"
@@ -25,6 +26,7 @@ jobs:
       # Substitute the Manifest and Download URLs in the world.json
       - name: Substitute in World Manifest
         id: sub_world_manifest
+        if: "!github.event.release.prerelease"
         uses: microsoft/variable-substitution@v1
         with:
           files: "world.json"
@@ -37,6 +39,7 @@ jobs:
       # Pre-release: substitute the Manifest and Download URLs in the module.json
       - name: Pre-release - Substitute in Module Manifest
         id: pre_sub_module_manifest
+        if: "github.event.release.prerelease"
         uses: microsoft/variable-substitution@v1
         with:
           files: "module.json"
@@ -49,6 +52,7 @@ jobs:
       # Pre-release: Substitute the Manifest and Download URLs in the world.json
       - name: Pre-release - Substitute in World Manifest
         id: pre_sub_world_manifest
+        if: "github.event.release.prerelease"
         uses: microsoft/variable-substitution@v1
         with:
           files: "world.json"
