@@ -50,7 +50,6 @@
   ],
   "manifest": "https://github.com/world-smiths/the-sky-isles/releases/latest/download/world.json",
   "download": "https://github.com/world-smiths/the-sky-isles/releases/latest/download/world.zip",
-
   "background": "worlds/the-sky-isles/scenes/backgrounds/cover.webp",
   "coreVersion": "9.242",
   "nextSession": null,
