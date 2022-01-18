@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.0 - unreleased
+## 1.1.0 - 18 Jan 2022
 
 * Update the fire damage of the Master Phoenix Monk's unarmed strike
 * Migrate to v9 & dnd5e 1.5.6
