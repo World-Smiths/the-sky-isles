@@ -10,9 +10,21 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      # Substitute the Manifest and Download URLs in the module.json
+      - name: Substitute in Module Manifest
+        id: sub_module_manifest_link_version
+        uses: microsoft/variable-substitution@v1
+        with:
+          files: "module.json"
+        env:
+          version: ${{github.event.release.tag_name}}
+          url: https://github.com/${{github.repository}}
+          manifest: https://github.com/${{github.repository}}/releases/latest/download/module.json
+          download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/module.zip
+
       # Substitute the Manifest and Download URLs in the world.json
-      - name: Substitute Manifest and Download Links For Versioned Ones
-        id: sub_manifest_link_version
+      - name: Substitute in World Manifest
+        id: sub_world_manifest_link_version
         uses: microsoft/variable-substitution@v1
         with:
           files: "world.json"
@@ -23,25 +35,52 @@ jobs:
           download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/world.zip
 
       # Create a zip file with all files required by the world to add to the release
-      - run: zip -r ./world.zip world.json LICENSE OGL.txt CHANGELOG.md styles/ scripts/ scenes/ packs/ journals/ data/ actors/
+      - run: zip -r ./module.zip module.json README.md LICENSE OGL.txt CHANGELOG.md styles/ scripts/ scenes/ journals/ actors/ packs/
+      - run: zip -r ./world.zip world.json README.md LICENSE OGL.txt CHANGELOG.md styles/ scripts/ scenes/ journals/ actors/ data/
 
       # Create a release for this specific version
       - name: Update Release with Files
+        if: "!github.event.release.prerelease"
         id: create_version_release
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true # Set this to false if you want to prevent updating existing releases
           name: ${{ github.event.release.name }}
           draft: false
-          prerelease: false
+          prerelease: ${{ github.event.release.prerelease }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "./world.json, ./world.zip"
+          artifacts: "./module.json, ./world.json, ./module.zip, ./world.zip"
           tag: ${{ github.event.release.tag_name }}
           body: ${{ github.event.release.body }}
 
+      # Update next branch
+      - name: Prepare repository
+        if: "github.event.release.prerelease"
+        run: |
+          git config --global user.name '${{github.actor}}'
+          git config --global user.email '${{github.actor}}@users.noreply.github.com'
+          git add module.json world.json
+          git stash
+          git clean -f
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY"
+          git fetch origin "next"
+          git switch -c "next" "origin/next"
+          git checkout stash module.json world.json
+          git commit -m "${{github.event.release.tag_name}} manifest"
+          git push -f
+
       # Autopublish to the Foundry Admin panel
-      - name: FoundryVTT AutoPublish
-        uses: Varriount/fvtt-autopublish@v1.0.2a
+      - name: AutoPublish Module
+        uses: Varriount/fvtt-autopublish@v1.0.6
+        with:
+          username: ${{ secrets.FOUNDRY_ADMIN_USER }}
+          password: ${{ secrets.FOUNDRY_ADMIN_PW }}
+          module-id: ${{ secrets.FOUNDRY_ADMIN_ID }}
+          manifest-url: https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/module.json
+          manifest-file: ./module.json
+
+      - name: AutoPublish World
+        uses: Varriount/fvtt-autopublish@v1.0.6
         with:
           username: ${{ secrets.FOUNDRY_ADMIN_USER }}
           password: ${{ secrets.FOUNDRY_ADMIN_PW }}
