@@ -31,7 +31,7 @@
     "flags": {
         "allowBugReporter": true
     },
-    "version": "1.1.0",
+    "version": "1.1.0-rc",
     "scripts": [],
     "esmodules": [
         "scripts/world.js"
@@ -49,7 +49,7 @@
         }
     ],
     "manifest": "https://raw.githubusercontent.com/World-Smiths/the-sky-isles/next/world.json",
-    "download": "https://github.com/World-Smiths/the-sky-isles/releases/download/1.1.0/world.zip",
+    "download": "https://github.com/World-Smiths/the-sky-isles/releases/download/1.1.0-rc/world.zip",
     "background": "worlds/the-sky-isles/scenes/backgrounds/cover.webp",
     "coreVersion": "9.242",
     "nextSession": null,
