@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # Substitute the Manifest and Download URLs in the module.json
+      # Substitute the URLs in the module.json
       - name: Substitute in Module Manifest
         id: sub_module_manifest
         if: "!github.event.release.prerelease"
@@ -23,7 +23,7 @@ jobs:
           manifest: https://github.com/${{github.repository}}/releases/latest/download/module.json
           download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/module.zip
 
-      # Substitute the Manifest and Download URLs in the world.json
+      # Substitute the URLs in the world.json
       - name: Substitute in World Manifest
         id: sub_world_manifest
         if: "!github.event.release.prerelease"
@@ -36,7 +36,7 @@ jobs:
           manifest: https://github.com/${{github.repository}}/releases/latest/download/world.json
           download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/world.zip
 
-      # Pre-release: substitute the Manifest and Download URLs in the module.json
+      # Pre-release: substitute the URLs in the module.json
       - name: Pre-release - Substitute in Module Manifest
         id: pre_sub_module_manifest
         if: "github.event.release.prerelease"
@@ -49,7 +49,7 @@ jobs:
           manifest: https://raw.githubusercontent.com/${{github.repository}}/next/module.json
           download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/module.zip
 
-      # Pre-release: Substitute the Manifest and Download URLs in the world.json
+      # Pre-release: substitute the URLs in the world.json
       - name: Pre-release - Substitute in World Manifest
         id: pre_sub_world_manifest
         if: "github.event.release.prerelease"
@@ -62,7 +62,7 @@ jobs:
           manifest: https://raw.githubusercontent.com/${{github.repository}}/next/world.json
           download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/world.zip
 
-      # Create a zip file with all files required by the world to add to the release
+      # Create a zip file with all files required to add to the release
       - run: zip -r ./module.zip module.json README.md LICENSE OGL.txt CHANGELOG.md styles/ scripts/ scenes/ journals/ actors/ packs/
       - run: zip -r ./world.zip world.json README.md LICENSE OGL.txt CHANGELOG.md styles/ scripts/ scenes/ journals/ actors/ data/
 
@@ -80,7 +80,7 @@ jobs:
           tag: ${{ github.event.release.tag_name }}
           body: ${{ github.event.release.body }}
 
-      # Update next branch
+      # Pre-release: update next branch
       - name: Prepare repository
         id: prep_repo
         if: "github.event.release.prerelease"
