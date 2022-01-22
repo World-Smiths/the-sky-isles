@@ -48,14 +48,15 @@
       "type": "module"
     }
   ],
+  "socket": false,
   "manifest": "https://github.com/world-smiths/the-sky-isles/releases/latest/download/world.json",
   "download": "https://github.com/world-smiths/the-sky-isles/releases/latest/download/world.zip",
+  "protected": false,
   "background": "worlds/the-sky-isles/scenes/backgrounds/cover.webp",
   "coreVersion": "9.242",
-  "nextSession": null,
   "resetKeys": false,
   "safeMode": false,
-  "systemVersion": "1.5.6",
+  "systemVersion": "1.5.7",
   "manifestPlusVersion": "1.2.0",
   "media": [
     {
