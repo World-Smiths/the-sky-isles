@@ -12,5 +12,6 @@
 * Improved alignment of Scene Initial Views
 * Added a "The Sky Isles" folder for everything
 * Module version packed with Scene Packer
+* New cover image specifically for The Sky Isles
 
 ## 1.0.0 - 26 Oct 2021 - Initial Release
