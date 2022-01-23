@@ -14,15 +14,11 @@ Take your party to gorgeous earth motes high above the clouds, inhabited by monk
 
 This is a preview for the [Amazing Encounters & Places Kickstarter](https://www.kickstarter.com/projects/2071391541/amazing-encounters-and-places-vol-1-5e) by [CZRPG](https://czrpg.com/).
 
-![login](https://user-images.githubusercontent.com/82790112/138794786-f839e9da-b43f-4767-af50-016f00e4250c.png)
+|  |  |  |
+| ---- | ---- | ---- |
+| ![skywalk](https://user-images.githubusercontent.com/82790112/138880390-695d00e5-23ed-4c7d-85ed-da693b16cc83.gif) | ![landing](https://media.discordapp.net/attachments/892517753905365002/902358803331301426/unknown.png) | ![incantation](https://user-images.githubusercontent.com/82790112/138797534-3d18a62c-d06d-4114-b557-9dead1979ada.gif) |
 
-![skywalk](https://user-images.githubusercontent.com/82790112/138880390-695d00e5-23ed-4c7d-85ed-da693b16cc83.gif)
-
-![landing](https://media.discordapp.net/attachments/892517753905365002/902358803331301426/unknown.png)
-
-![incantation](https://user-images.githubusercontent.com/82790112/138797534-3d18a62c-d06d-4114-b557-9dead1979ada.gif)
-
-https://user-images.githubusercontent.com/82790112/138928725-162b9ab3-b415-4026-8e6f-c2fd7bd77b8a.mp4
+<https://user-images.githubusercontent.com/82790112/138928725-162b9ab3-b415-4026-8e6f-c2fd7bd77b8a.mp4>
 
 ## Installation
 
