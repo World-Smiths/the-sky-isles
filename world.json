@@ -52,7 +52,7 @@
   "manifest": "https://github.com/world-smiths/the-sky-isles/releases/latest/download/world.json",
   "download": "https://github.com/world-smiths/the-sky-isles/releases/latest/download/world.zip",
   "protected": false,
-  "background": "worlds/the-sky-isles/scenes/backgrounds/cover.webp",
+  "background": "worlds/the-sky-isles/scenes/backgrounds/login.webp",
   "coreVersion": "9.242",
   "resetKeys": false,
   "safeMode": false,
@@ -61,7 +61,7 @@
   "media": [
     {
       "type": "cover",
-      "url": "https://raw.githubusercontent.com/World-Smiths/the-sky-isles/main/scenes/backgrounds/cover.webp"
+      "url": "https://raw.githubusercontent.com/World-Smiths/the-sky-isles/main/cover.webp"
     }
   ]
 }
