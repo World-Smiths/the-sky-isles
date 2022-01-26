@@ -48,7 +48,8 @@
       "label": "The Sky Isles",
       "path": "packs/scenes.db",
       "entity": "Scene",
-      "type": "Scene"
+      "type": "Scene",
+      "system": "dnd5e"
     },
     {
       "name": "actors",
