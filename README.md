@@ -39,15 +39,22 @@ Want to contribute to this world or similar projects?
 ## Credits
 
 **Author:** Christian Zeuch
+
 **Editor:** Kathleen Harrington
+
 **Art Direction:** Chris Hopper, Christian Zeuch
+
 **Layout Artist:** Chris Hopper
+
 **Playtesters:** Rory Crawford, Crash Test Dummies
+
 **Cover Art:** [Bad Moon Art Studio](www.badmoonart.com)
+
 **Sensitivity Reader:** Iori Kusano
+
 **Cartography:** Christian Zeuch
+
 **Interior Art:** Gary Dupuis, Forrest Imel, liuzishan, susanafh, Maxim B, grandfailure, Анна Богатырева, Konstantin Gerasimov, [info@nextmars.com](mailto:info@nextmars.com)
-**FoundryVTT Conversion:** [World Smiths](https://world-smiths.github.io/page)
 
 ## License
 
