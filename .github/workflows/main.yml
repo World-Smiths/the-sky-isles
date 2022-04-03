@@ -63,8 +63,8 @@ jobs:
           download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/world.zip
 
       # Create a zip file with all files required to add to the release
-      - run: zip -r ./module.zip module.json README.md LICENSE OGL.txt CHANGELOG.md styles/ scripts/ scenes/ journals/ actors/ packs/
-      - run: zip -r ./world.zip world.json README.md LICENSE OGL.txt CHANGELOG.md styles/ scripts/ scenes/ journals/ actors/ data/
+      - run: zip -r ./module.zip module.json README.md LICENSE OGL.txt CHANGELOG.md styles/ scripts/ scenes/ journals/ actors/ packs/ audio/
+      - run: zip -r ./world.zip world.json README.md LICENSE OGL.txt CHANGELOG.md styles/ scripts/ scenes/ journals/ actors/ data/ audio/ 
 
       # Create a release for this specific version
       - name: Update Release with Files
