@@ -23,7 +23,7 @@
       "name": "Rodolfo Salgueiro"
     }
   ],
-  "url": "https://world-smiths.github.io/page",
+  "url": "https://github.com/world-smiths/the-sky-isles",
   "license": "https://github.com/world-smiths/the-sky-isles/blob/main/LICENSE",
   "readme": "https://github.com/world-smiths/the-sky-isles/blob/main/README.md",
   "bugs": "https://github.com/world-smiths/the-sky-isles/issues",
@@ -103,7 +103,7 @@
   "media": [
     {
       "type": "cover",
-      "url": "https://raw.githubusercontent.com/World-Smiths/the-sky-isles/main/cover.webp"
+      "url": "https://raw.githubusercontent.com/world-smiths/the-sky-isles/main/cover.webp"
     }
   ]
 }
