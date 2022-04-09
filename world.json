@@ -53,7 +53,7 @@
   "download": "https://github.com/world-smiths/the-sky-isles/releases/latest/download/world.zip",
   "protected": false,
   "background": "worlds/the-sky-isles/scenes/backgrounds/login.webp",
-  "coreVersion": "9.249",
+  "coreVersion": "9.266",
   "resetKeys": false,
   "safeMode": false,
   "systemVersion": "1.5.7",
