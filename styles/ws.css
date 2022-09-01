@@ -21,6 +21,10 @@ li > .entity-link {
   line-height: 1.75em;
 }
 
+.ws-sidebar-group .ddbimporter-image-container {
+  flex: 2;
+}
+
 /* Layout */
 
 .ws-sidebar-group {
@@ -28,11 +32,11 @@ li > .entity-link {
   gap: 1em;
 }
 
-.ws-sidebar-group > main {
+.ws-sidebar-group main {
   flex: 3;
 }
 
-.ws-sidebar-group > aside.ws-block.sidebar {
+.ws-sidebar-group aside.ws-block.sidebar {
   flex: 2;
   height: max-content;
   background-image: linear-gradient(
