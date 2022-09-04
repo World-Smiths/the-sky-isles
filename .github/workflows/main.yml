@@ -101,7 +101,7 @@ jobs:
       - name: AutoPublish Module
         id: pub_module
         if: "!github.event.release.prerelease"
-        uses: Varriount/fvtt-autopublish@v1.0.6
+        uses: Varriount/fvtt-autopublish@v1.0.9
         with:
           username: ${{ secrets.FOUNDRY_ADMIN_USER }}
           password: ${{ secrets.FOUNDRY_ADMIN_PW }}
@@ -112,7 +112,7 @@ jobs:
       - name: AutoPublish World
         id: pub_world
         if: "!github.event.release.prerelease"
-        uses: Varriount/fvtt-autopublish@v1.0.6
+        uses: Varriount/fvtt-autopublish@v1.0.9
         with:
           username: ${{ secrets.FOUNDRY_ADMIN_USER }}
           password: ${{ secrets.FOUNDRY_ADMIN_PW }}
