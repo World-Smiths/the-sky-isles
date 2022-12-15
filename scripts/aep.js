@@ -2,7 +2,6 @@ const ID = "aep";
 
 const id = "the-sky-isles";
 const title = "The Sky Isles";
-const description = "PLACEHOLDER";
 const tourTitle = "Importing an Amazing Encounters & Places adventure";
 const tourDescription = "This Tour will guide you through importing World Smiths's Amazing Encounters & Places content.";
 const getPackage = () => game.modules.get(id)?.active ? id : "world";
@@ -61,7 +60,7 @@ const ADVENTURE = {
                     title,
                     background: `modules/${id}/scenes/backgrounds/login.webp`,
                     nextSession: null,
-                    description,
+                    description: game.modules.get(id).description,
                     id: game.world.id,
                     action: "editWorld"
                 }),
