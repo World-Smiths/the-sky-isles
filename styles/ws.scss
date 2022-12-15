@@ -1,238 +1,237 @@
 .aep {
 
-    // Journals
-    &.sheet.journal-entry {
-        overflow: hidden;
+	// Journals
+	&.sheet.journal-entry {
+		overflow: hidden;
 
-        .window-title {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap
-        }
+		.window-title {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
 
-        .collapse-toggle {
-            &::before {
-                color: white;
-                mix-blend-mode: difference;
-            }
-        }
+		.collapse-toggle {
+			&::before {
+				color: white;
+				mix-blend-mode: difference;
+			}
+		}
 
-        .journal-entry-content {
-            border: none;
-            border-radius: 0;
+		.journal-entry-content {
+			border: none;
+			border-radius: 0;
 
-            .journal-header {
-                display: none;
-            }
+			.journal-header {
+				display: none;
+			}
 
-            .journal-entry-pages {
-                margin: 0;
+			.journal-entry-pages {
+				margin: 0;
 
-                .scrollable {
-                    overflow: hidden overlay;
-                    scroll-behavior: smooth;
+				.scrollable {
+					overflow: hidden overlay;
+					scroll-behavior: smooth;
 
-                    .journal-entry-page {
-                        --small-margin: 2rem;
-                        --large-margin: 5rem;
+					.journal-entry-page {
+						--small-margin: 2rem;
+						--large-margin: 5rem;
 
-                        &+.journal-entry-page {
-                            margin-top: var(--small-margin);
-                        }
+						&+.journal-entry-page {
+							margin-top: var(--small-margin);
+						}
 
-                        &.text {
+						&.text {
 
-                            &>header,
-                            &>section {
-                                margin: var(--small-margin) var(--large-margin);
-                            }
+							&>header,
+							&>section {
+								margin: var(--small-margin) var(--large-margin);
+							}
 
-                            font-size: 1.125em;
-                            line-height: 1.5;
-                            letter-spacing: 0.05ch;
+							font-size: 1.125em;
+							line-height: 1.5;
+							letter-spacing: 0.05ch;
 
-                            * {
-                                user-select: text;
-                            }
-                        }
+							* {
+								user-select: text;
+							}
+						}
 
-                        &:hover .editor-edit {
-                            display: none;
-                        }
+						&:hover .editor-edit {
+							display: none;
+						}
 
-                        &:first-child {
-                            figure {
-                                margin: calc(-1 * var(--small-margin)) calc(-1 * var(--large-margin)) var(--small-margin) calc(-1 * var(--large-margin));
+						&:first-child {
+							figure {
+								margin: calc(-1 * var(--small-margin)) calc(-1 * var(--large-margin)) var(--small-margin) calc(-1 * var(--large-margin));
 
-                                img {
-                                    mask-image: linear-gradient(to bottom, black, 75%, transparent);
-                                }
-                            }
-                        }
+								img {
+									mask-image: linear-gradient(to bottom, black, 75%, transparent);
+								}
+							}
+						}
 
-                        figure {
-                            margin: 0 calc(-1 * var(--large-margin)) var(--small-margin) calc(-1 * var(--large-margin));
+						figure {
+							margin: 0 calc(-1 * var(--large-margin)) var(--small-margin) calc(-1 * var(--large-margin));
 
-                            img {
-                                border: none;
-                                border-radius: 0;
-                                mask-image: linear-gradient(to bottom, transparent, 10%, black, 75%, transparent);
-                                margin-bottom: -10%;
-                                object-fit: cover;
-                                width: 100%;
-                                min-width: calc(100% + 1px); // Extra pixel so there is no gap on right side
-                            }
+							img {
+								border: none;
+								border-radius: 0;
+								mask-image: linear-gradient(to bottom, transparent, 10%, black, 75%, transparent);
+								margin-bottom: -10%;
+								object-fit: cover;
+								width: 100%;
+								min-width: calc(100% + 1px); // Extra pixel so there is no gap on right side
+							}
 
-                            figcaption {
-                                opacity: 0;
-                                transition: 250ms 500ms;
-                                color: white;
-                                font-weight: normal;
-                                backdrop-filter: brightness(0.5);
-                                border-radius: 1ch;
-                                padding: 1ch;
-                                width: fit-content;
-                                margin: 0 auto;
-                            }
+							figcaption {
+								opacity: 0;
+								transition: 250ms 500ms;
+								color: white;
+								font-weight: normal;
+								backdrop-filter: brightness(0.5);
+								border-radius: 1ch;
+								padding: 1ch;
+								width: fit-content;
+								margin: 0 auto;
+							}
 
-                            &:hover figcaption {
-                                opacity: 1;
-                            }
-                        }
+							&:hover figcaption {
+								opacity: 1;
+							}
+						}
 
-                        // Allow blocks inside the margin
-                        .ws-block {
-                            margin: 1rem -1rem;
+						// Allow blocks inside the margin
+						.ws-block {
+							margin: 1rem -1rem;
 
-                            &.ws-right {
-                                margin-left: 1rem;
-                            }
+							&.ws-right {
+								margin-left: 1rem;
+							}
 
-                            &.ws-left {
-                                margin-right: 1rem;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+							&.ws-left {
+								margin-right: 1rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
-    // Blocks
-    .ws-block {
-        border-radius: 5px;
-        padding: 1rem;
-        margin: 1rem;
-        box-shadow: 0.5em 0.5em 0.25em #00000050;
-        color: white;
-        background-repeat: repeat;
+	// Blocks
+	.ws-block {
+		border-radius: 5px;
+		padding: 1rem;
+		margin: 1rem;
+		box-shadow: 0.5em 0.5em 0.25em #00000050;
+		color: white;
+		background-repeat: repeat;
 
-        h3 {
-            border: none;
-        }
+		h3 {
+			border: none;
+		}
 
-        :is(.content-link, .inline-roll) i {
-            color: white;
-        }
+		:is(.content-link, .inline-roll) i {
+			color: white;
+		}
 
-        &.ws-sidebar {
-            width: 45%;
-            background-image: linear-gradient(0,
-                    hsla(350, 100%, 40%, 50%),
-                    hsla(275, 100%, 40%, 50%)),
-                url(../../../ui/denim.png);
+		&.ws-sidebar {
+			width: 45%;
+			font-size: 0.9rem;
+			background-image: linear-gradient(0, hsla(350, 100%, 40%, 50%), hsla(275, 100%, 40%, 50%)),
+				url(../../../ui/denim.png);
 
-            &.ws-right {
-                float: right;
-            }
+			&.ws-right {
+				float: right;
+			}
 
-            &.ws-left {
-                float: left;
-            }
-        }
+			&.ws-left {
+				float: left;
+			}
+		}
 
-        &.ws-highlight {
-            background-image: linear-gradient(0,
-                    hsla(40, 100%, 60%, 50%),
-                    hsla(0, 100%, 60%, 50%)),
-                url(../../../ui/parchment-white.jpg);
-            color: black;
-        }
+		&.ws-highlight {
+			background-image: linear-gradient(0, hsla(40, 100%, 60%, 50%), hsla(0, 100%, 60%, 50%)),
+				url(../../../ui/parchment-white.jpg);
+			color: black;
+		}
 
-        &.ws-skill-challenge {
-            background-color: hsla(150, 50%, 50%, 10%);
-            background-image: linear-gradient(0,
-                    hsla(120, 100%, 60%, 50%),
-                    hsla(160, 100%, 60%, 50%)),
-                url(../../../ui/parchment-white.jpg);
-            color: black;
-        }
+		&.ws-skill-challenge {
+			background-color: hsla(150, 50%, 50%, 10%);
+			background-image: linear-gradient(0, hsla(120, 100%, 60%, 50%), hsla(160, 100%, 60%, 50%)),
+				url(../../../ui/parchment-white.jpg);
+			color: black;
+		}
 
-        &.ws-box {
-            background-image: url(../../../ui/denim.png);
-        }
+		&.ws-box {
+			background-image: url(../../../ui/denim.png);
+		}
 
-        &.ws-note {
-            background-image: linear-gradient(0,
-                    hsla(250, 100%, 30%, 50%),
-                    hsla(175, 100%, 30%, 50%)),
-                url(../../../ui/denim.png);
-            display: flex;
-            gap: 1em;
+		&.ws-note {
+			background-image: linear-gradient(0, hsla(250, 100%, 30%, 50%), hsla(175, 100%, 30%, 50%)),
+				url(../../../ui/denim.png);
+			display: flex;
+			gap: 1em;
 
-            &>.contents {
-                flex: 90%;
-            }
+			&>.contents {
+				flex: 90%;
+				font-size: 0.9rem;
+				line-height: 1.15;
+			}
 
-            img {
-                border: none;
-            }
-        }
-    }
+			img {
+				border: none;
+			}
+		}
+	}
 
-    // General styling
-    :is(h1, h2, h3, h4, h5, h6) {
-        display: flow-root;
-    }
+	// General styling
+	:is(h1, h2, h3, h4, h5, h6) {
+		display: flow-root;
+	}
 
-    table {
-        :is(th, td) {
-            padding: 1ch;
-            border: solid 1px rgba(0, 0, 0, 0.5);
-        }
+	table {
+		:is(th, td) {
+			padding: 1ch;
+			border: solid 1px rgba(0, 0, 0, 0.5);
+		}
 
-        :is(.content-link, .inline-roll) {
-            white-space: normal;
-            box-decoration-break: clone;
-        }
-    }
+		:is(.content-link, .inline-roll) {
+			white-space: normal;
+			box-decoration-break: clone;
+		}
+	}
 
-    blockquote {
-        margin-bottom: 1rem;
-    }
+	blockquote {
+		margin-bottom: 1rem;
+	}
 
-    :is(.content-link, .inline-roll) {
-        --normal: 25%;
-        --hover: 50%;
-        border: none;
-        padding: 0.25ch 0.5ch;
-        margin: -0.25ch 0;
-        background: linear-gradient(to bottom, hsl(175deg, 71%, 40%, var(--normal)), hsl(245deg, 95%, 67%, var(--normal)));
+	:is(.content-link, .inline-roll) {
+		--normal: 25%;
+		--hover: 50%;
+		border: none;
+		padding: 0.25ch 0.5ch;
+		margin: -0.25ch 0;
+		background: linear-gradient(to bottom,
+				hsl(175deg, 71%, 40%, var(--normal)),
+				hsl(245deg, 95%, 67%, var(--normal)));
 
-        &:hover {
-            text-shadow: none;
-            background: linear-gradient(to bottom, hsl(175deg, 71%, 40%, var(--hover)), hsl(245deg, 95%, 67%, var(--hover)));
-        }
-    }
+		&:hover {
+			text-shadow: none;
+			background: linear-gradient(to bottom,
+					hsl(175deg, 71%, 40%, var(--hover)),
+					hsl(245deg, 95%, 67%, var(--hover)));
+		}
+	}
 
-    li>:is(.content-link, .inline-roll) {
-        line-height: 1.75;
-    }
+	li> :is(.content-link, .inline-roll) {
+		line-height: 1.75;
+	}
 
-    // Item & Actor biographies
-    .editor-content {
-        font-size: 1.125em;
-        line-height: 1.5;
-        letter-spacing: 0.05ch;
-    }
+	// Item & Actor biographies
+	.editor-content {
+		font-size: 1.125em;
+		line-height: 1.5;
+		letter-spacing: 0.05ch;
+	}
 }
