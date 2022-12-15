@@ -32,11 +32,12 @@
     "allowBugReporter": true
   },
   "version": "1.1.0",
-  "minimumCoreVersion": "0.7.9",
-  "compatibleCoreVersion": 9,
+  "compatibility": {
+    "verified": "10.290"
+  },
   "scripts": [],
   "esmodules": [
-    "scripts/module.js"
+    "scripts/aep.js"
   ],
   "styles": [
     "styles/ws.css"
@@ -44,59 +45,30 @@
   "languages": [],
   "packs": [
     {
-      "name": "scenes",
-      "label": "The Sky Isles",
-      "path": "packs/scenes.db",
-      "entity": "Scene",
-      "type": "Scene",
-      "system": "dnd5e"
-    },
-    {
-      "name": "actors",
-      "label": "The Sky Isles",
-      "path": "packs/actors.db",
-      "entity": "Actor",
-      "type": "Actor",
-      "system": "dnd5e"
-    },
-    {
-      "name": "journal",
-      "label": "The Sky Isles",
-      "path": "packs/journal.db",
-      "entity": "JournalEntry",
-      "type": "JournalEntry",
-      "system": "dnd5e"
-    },
-    {
-      "name": "items",
-      "label": "The Sky Isles",
-      "path": "packs/items.db",
-      "entity": "Item",
-      "type": "Item",
-      "system": "dnd5e"
-    },
-    {
-      "name": "macros",
-      "label": "The Sky Isles",
-      "path": "packs/macros.db",
-      "entity": "Macro",
-      "type": "Macro",
+      "label": "Amazing Encounters & Places",
+      "type": "Adventure",
+      "name": "aep",
+      "path": "packs/aep.db",
       "system": "dnd5e"
     }
   ],
-  "system": [
-    "dnd5e"
-  ],
-  "dependencies": [
-    {
-      "name": "wall-height",
-      "type": "module"
-    },
-    {
-      "name": "scene-packer",
-      "type": "module"
-    }
-  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "2.0.0-alpha2",
+          "verified": "2.0.3"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "wall-height"
+      }
+    ]
+  },
   "manifest": "https://github.com/world-smiths/the-sky-isles/releases/latest/download/module.json",
   "download": "https://github.com/world-smiths/the-sky-isles/releases/latest/download/module.zip",
   "manifestPlusVersion": "1.2.0",

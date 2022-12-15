@@ -33,8 +33,7 @@ Want to contribute to this world or similar projects?
 
 ## Dependencies
 
-* [Scene Packer](https://foundryvtt.com/packages/scene-packer) is used in the module version to unpack the compendiums, provide with folder structure in the Sidebar, and take care of re-linking of Documents.
-* [Wall Height](https://foundryvtt.com/packages/wall-height) allows for a more dynamic experience on the "The Way Up" scene. Make sure you know how to [adjust token elevation](https://foundryvtt.com/article/tokens)!
+[Wall Height](https://foundryvtt.com/packages/wall-height) allows for a more dynamic experience on the "The Way Up" scene. Make sure you know how to [adjust token elevation](https://foundryvtt.com/article/tokens)!
 
 ## Credits
 
