@@ -64,4 +64,3 @@ This adventure content is offered and may be used under the terms of the [Open G
 The maps were created by [CZRPG](https://czrpg.com/) and are used with express permission.
 The World Smiths logo is under the license [here](https://github.com/World-Smiths/documentation#license).
 All other art assets are provided by [CZRPG](https://czrpg.com/) who has license to use them commercially.
-The software component of this world is distributed under the [MIT](./LICENSE) license.

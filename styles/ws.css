@@ -1,105 +1,179 @@
-/* Fixes */
-
-.editor-content table tbody tr td {
-  padding: 0 15px;
+.aep.sheet.journal-entry {
+  overflow: hidden;
 }
-
-.editor-content table tbody tr td:first-child {
+.aep.sheet.journal-entry .window-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
-
-.editor-content blockquote {
-  margin-bottom: 1.5em;
+.aep.sheet.journal-entry .collapse-toggle::before {
+  color: white;
+  mix-blend-mode: difference;
 }
-
-.editor-content {
-  padding-right: 5px;
-  overflow-x: hidden;
+.aep.sheet.journal-entry .journal-entry-content {
+  border: none;
+  border-radius: 0;
 }
-
-li > .entity-link {
-  line-height: 1.75em;
+.aep.sheet.journal-entry .journal-entry-content .journal-header {
+  display: none;
 }
-
-.ws-sidebar-group .ddbimporter-image-container {
-  flex: 2;
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages {
+  margin: 0;
 }
-
-/* Layout */
-
-.ws-sidebar-group {
-  display: flex;
-  gap: 1em;
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable {
+  overflow: hidden overlay;
+  scroll-behavior: smooth;
 }
-
-.ws-sidebar-group main {
-  flex: 3;
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page {
+  --small-margin: 2rem;
+  --large-margin: 5rem;
 }
-
-.ws-sidebar-group aside.ws-block.sidebar {
-  flex: 2;
-  height: max-content;
-  background-image: linear-gradient(
-      0,
-      hsla(350, 100%, 40%, 50%),
-      hsla(275, 100%, 40%, 50%)
-    ),
-    url(/ui/denim.png);
-  margin: 0.5em 0.5em 1em 0.5em;
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page + .journal-entry-page {
+  margin-top: var(--small-margin);
 }
-
-/* Blocks */
-
-.ws-block {
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page.text {
+  font-size: 1.125em;
+  line-height: 1.5;
+  letter-spacing: 0.05ch;
+}
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page.text > header, .aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page.text > section {
+  margin: var(--small-margin) var(--large-margin);
+}
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page.text * {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page:hover .editor-edit {
+  display: none;
+}
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page:first-child figure {
+  margin: calc(-1 * var(--small-margin)) calc(-1 * var(--large-margin)) var(--small-margin) calc(-1 * var(--large-margin));
+}
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page:first-child figure img {
+  -webkit-mask-image: linear-gradient(to bottom, black, 75%, transparent);
+          mask-image: linear-gradient(to bottom, black, 75%, transparent);
+}
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page figure {
+  margin: 0 calc(-1 * var(--large-margin)) var(--small-margin) calc(-1 * var(--large-margin));
+}
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page figure img {
+  border: none;
+  border-radius: 0;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, 10%, black, 75%, transparent);
+          mask-image: linear-gradient(to bottom, transparent, 10%, black, 75%, transparent);
+  margin-bottom: -10%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  min-width: calc(100% + 1px);
+}
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page figure figcaption {
+  opacity: 0;
+  transition: 250ms 500ms;
+  color: white;
+  font-weight: normal;
+  -webkit-backdrop-filter: brightness(0.5);
+          backdrop-filter: brightness(0.5);
+  border-radius: 1ch;
+  padding: 1ch;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page figure:hover figcaption {
+  opacity: 1;
+}
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page .ws-block {
+  margin: 1rem -1rem;
+}
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page .ws-block.ws-right {
+  margin-left: 1rem;
+}
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page .ws-block.ws-left {
+  margin-right: 1rem;
+}
+.aep .ws-block {
   border-radius: 5px;
-  padding: 1em;
-  margin: 0.5em 0.5em 1em 0;
-  box-shadow: 0.5em 0.5em 0.25em #00000050;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0.5em 0.5em 0.25em rgba(0, 0, 0, 0.3137254902);
   color: white;
   background-repeat: repeat;
 }
-.ws-block .entity-link, .ws-block .inline-roll {
+.aep .ws-block h3 {
+  border: none;
+}
+.aep .ws-block :is(.content-link, .inline-roll) i {
+  color: white;
+}
+.aep .ws-block.ws-sidebar {
+  width: 45%;
+  background-image: linear-gradient(0, hsla(350deg, 100%, 40%, 0.5), hsla(275deg, 100%, 40%, 0.5)), url(../../../ui/denim.png);
+}
+.aep .ws-block.ws-sidebar.ws-right {
+  float: right;
+}
+.aep .ws-block.ws-sidebar.ws-left {
+  float: left;
+}
+.aep .ws-block.ws-highlight {
+  background-image: linear-gradient(0, hsla(40deg, 100%, 60%, 0.5), hsla(0deg, 100%, 60%, 0.5)), url(../../../ui/parchment-white.jpg);
   color: black;
 }
-
-.ws-block.highlight {
-  background-image: linear-gradient(
-      0,
-      hsla(40, 100%, 60%, 50%),
-      hsla(0, 100%, 60%, 50%)
-    ),
-    url(/ui/parchment-white.jpg);
+.aep .ws-block.ws-skill-challenge {
+  background-color: hsla(150deg, 50%, 50%, 0.1);
+  background-image: linear-gradient(0, hsla(120deg, 100%, 60%, 0.5), hsla(160deg, 100%, 60%, 0.5)), url(../../../ui/parchment-white.jpg);
   color: black;
 }
-
-.ws-block.skill-challenge {
-  background-color: hsla(150, 50%, 50%, 10%);
-  background-image: linear-gradient(
-      0,
-      hsla(120, 100%, 60%, 50%),
-      hsla(160, 100%, 60%, 50%)
-    ),
-    url(/ui/parchment-white.jpg);
-  color: black;
+.aep .ws-block.ws-box {
+  background-image: url(../../../ui/denim.png);
 }
-
-.ws-block.box {
-  background-image: url(/ui/denim.png);
-}
-
-.ws-block.note {
-  background-image: linear-gradient(
-      0,
-      hsla(250, 100%, 30%, 50%),
-      hsla(175, 100%, 30%, 50%)
-    ),
-    url(/ui/denim.png);
+.aep .ws-block.ws-note {
+  background-image: linear-gradient(0, hsla(250deg, 100%, 30%, 0.5), hsla(175deg, 100%, 30%, 0.5)), url(../../../ui/denim.png);
   display: flex;
   gap: 1em;
 }
-.ws-block.note > .contents {
+.aep .ws-block.ws-note > .contents {
   flex: 90%;
 }
-.ws-block.note img {
+.aep .ws-block.ws-note img {
   border: none;
 }
+.aep :is(h1, h2, h3, h4, h5, h6) {
+  display: flow-root;
+}
+.aep table :is(th, td) {
+  padding: 1ch;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+}
+.aep table :is(.content-link, .inline-roll) {
+  white-space: normal;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+}
+.aep blockquote {
+  margin-bottom: 1rem;
+}
+.aep :is(.content-link, .inline-roll) {
+  --normal: 25%;
+  --hover: 50%;
+  border: none;
+  padding: 0.25ch 0.5ch;
+  margin: -0.25ch 0;
+  background: linear-gradient(to bottom, hsl(175deg, 71%, 40%, var(--normal)), hsl(245deg, 95%, 67%, var(--normal)));
+}
+.aep :is(.content-link, .inline-roll):hover {
+  text-shadow: none;
+  background: linear-gradient(to bottom, hsl(175deg, 71%, 40%, var(--hover)), hsl(245deg, 95%, 67%, var(--hover)));
+}
+.aep li > :is(.content-link, .inline-roll) {
+  line-height: 1.75;
+}
+.aep .editor-content {
+  font-size: 1.125em;
+  line-height: 1.5;
+  letter-spacing: 0.05ch;
+}/*# sourceMappingURL=ws.css.map */
