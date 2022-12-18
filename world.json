@@ -1,6 +1,6 @@
 {
   "title": "The Sky Isles",
-  "description": "<p>Take your party to gorgeous earth motes high above the clouds, inhabited by monks from the Order of the Phoenix. Meet the docile winged leopards, scale the floating islands, learn about their culture. But don’t fall!</p>\n<p><em>This is a preview for the <a title=\"Kickstarter link\" href=\"https://www.kickstarter.com/projects/2071391541/amazing-encounters-and-places-vol-1-5e\" target=\"_blank\" rel=\"noopener\">Amazing Encounters &amp; Places Kickstarter</a> by <a title=\"Website\" href=\"https://czrpg.com/\" target=\"_blank\" rel=\"noopener\">CZRPG</a>.</em></p>\n<hr />\n<blockquote>\n<p><strong>System: </strong>DnD5e<br /><strong>Starting Level: </strong>Any<br /><strong>Length:</strong> Short multi-session (10-12 hours)<br /><strong>Language:</strong> English</p>\n</blockquote>",
+  "description": "Take your party to gorgeous earth motes high above the clouds, inhabited by monks from the Order of the Phoenix. Meet the docile winged leopards, scale the floating islands, learn about their culture. But don’t fall!",
   "version": "1.0.0",
   "esmodules": [
     "scripts/aep.js",

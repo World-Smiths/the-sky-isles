@@ -33,7 +33,8 @@
   },
   "version": "1.1.0",
   "compatibility": {
-    "verified": "10.290"
+    "verified": "10.291",
+    "minimum": "10"
   },
   "scripts": [],
   "esmodules": [
@@ -58,7 +59,7 @@
         "id": "dnd5e",
         "type": "system",
         "compatibility": {
-          "minimum": "2.0.0-alpha2",
+          "minimum": "2.0.3",
           "verified": "2.0.3"
         }
       }
