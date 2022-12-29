@@ -104,6 +104,10 @@
 						.ws-block {
 							margin: 1rem -1rem;
 
+							.ws-block {
+								margin: 1rem 0.5rem;
+							}
+
 							&.ws-right {
 								margin-left: 1rem;
 							}
@@ -129,6 +133,10 @@
 
 		h3 {
 			border: none;
+		}
+
+		a {
+			color: white;
 		}
 
 		:is(.content-link, .inline-roll) i {

@@ -89,6 +89,9 @@
 .aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page .ws-block {
   margin: 1rem -1rem;
 }
+.aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page .ws-block .ws-block {
+  margin: 1rem 0.5rem;
+}
 .aep.sheet.journal-entry .journal-entry-content .journal-entry-pages .scrollable .journal-entry-page .ws-block.ws-right {
   margin-left: 1rem;
 }
@@ -105,6 +108,9 @@
 }
 .aep .ws-block h3 {
   border: none;
+}
+.aep .ws-block a {
+  color: white;
 }
 .aep .ws-block :is(.content-link, .inline-roll) i {
   color: white;
