@@ -105,6 +105,7 @@
   box-shadow: 0.5em 0.5em 0.25em rgba(0, 0, 0, 0.3137254902);
   color: white;
   background-repeat: repeat;
+  clear: both;
 }
 .aep .ws-block h3 {
   border: none;
