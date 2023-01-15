@@ -73,7 +73,7 @@ Hooks.on("renderAdventureImporter", (app, html) => {
 	});
 
 	// Format options HTML
-	const options = `<section class="import-form"><h2>Importer Options</h2>`;
+	let options = `<section class="import-form"><h2>Importer Options</h2>`;
 	for (const [name, option] of Object.entries(importOptions)) {
 		options += `<div class="form-group">
 			<label class="checkbox">
