@@ -33,7 +33,7 @@ Want to contribute to this world or similar projects?
 
 ## Dependencies
 
-[Wall Height](https://foundryvtt.com/packages/wall-height) allows for a more dynamic experience on the "The Way Up" scene. Make sure you know how to [adjust token elevation](https://foundryvtt.com/article/tokens)!
+[Wall Height](https://foundryvtt.com/packages/wall-height) by [therippper93](https://theripper93.com) allows for a more dynamic experience on the "The Way Up" scene. Make sure you know how to [adjust token elevation](https://foundryvtt.com/article/tokens)!
 
 ## Credits
 
