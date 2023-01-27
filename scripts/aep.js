@@ -28,8 +28,8 @@ Hooks.on("renderAdventureImporter", classIfFlag);
 function classIfFlag(app, [html]) {
 	let doc = app.document;
 	do {
-		if (doc.getFlag("world", ID)) {
-			html.classList.add(ID);
+		if (doc.getFlag("world", "aep")) {
+			html.classList.add("aep");
 		}
 	} while ((doc = doc.parent));
 }
@@ -64,10 +64,10 @@ const getImportOptions = ({ id, title, description }) => ({
 // Add HTML options to the importer form
 Hooks.on("renderAdventureImporter", (app, html) => {
 	const { adventure } = app;
-	if (!adventure.getFlag("world", ID)) return;
+	if (adventure.getFlag("world", "aep") !== ID) return;
 
 	const importOptions = getImportOptions({
-		id: adventure.getFlag("world", ID),
+		id: adventure.getFlag("world", "aep"),
 		title: adventure.name,
 		description: adventure.description,
 	});
@@ -92,7 +92,7 @@ Hooks.on("renderAdventureImporter", (app, html) => {
 // Handle options supported by the importer
 Hooks.on("importAdventure", async (adventure, formData) => {
 	const importOptions = getImportOptions({
-		id: adventure.getFlag("world", ID),
+		id: adventure.getFlag("world", "aep"),
 		title: adventure.name,
 		description: adventure.description,
 	});
@@ -113,9 +113,9 @@ class ImportTour extends Tour {
 
 		if (this.currentStep.id === "adventurePack") {
 			await new Promise(resolve => {
-				game.packs.get(`${ID}.${ID}`).render(true);
+				game.packs.get(`${ID}.aep`).render(true);
 				Hooks.on("renderCompendium", app => {
-					if (app.metadata.name === ID) {
+					if (app.metadata.packageName === ID) {
 						resolve();
 					}
 				});
@@ -123,7 +123,7 @@ class ImportTour extends Tour {
 		} else if (this.currentStep.id === "importForm") {
 			await new Promise(resolve => {
 				Hooks.on("renderAdventureImporter", app => {
-					if (app.adventure.getFlag("world", ID)) {
+					if (app.adventure.getFlag("world", "aep")) {
 						resolve();
 					}
 				});
@@ -135,6 +135,13 @@ class ImportTour extends Tour {
 Hooks.on("setup", () => {
 	const description =
 		"This Tour will guide you through importing World Smiths's Amazing Encounters & Places content.";
+	let title = "Importing an Amazing Encounters & Places adventure";
+	if (ID !== "aep") {
+		const t = game.modules.get(ID)?.title;
+		if (t) {
+			title += `: ${t}`;
+		}
+	}
 
 	game.settings.register(ID, "importTour", {
 		scope: "world",
@@ -147,8 +154,9 @@ Hooks.on("setup", () => {
 		ID,
 		"import",
 		new ImportTour({
-			title: "Importing an Amazing Encounters & Places adventure",
+			title,
 			description,
+			display: true,
 			restricted: true,
 			steps: [
 				{
@@ -166,27 +174,27 @@ Hooks.on("setup", () => {
 				},
 				{
 					id: "adventurePack",
-					selector: `[data-pack='${ID}.${ID}']`,
+					selector: `[data-pack='${ID}.aep']`,
 					title: "Adventure Pack",
 					content: "Open the adventure compendium pack to view it's contents.",
 				},
 				{
 					id: "adventureDoc",
-					selector: `.compendium[data-pack='${ID}.${ID}'] .directory-list`,
+					selector: `.compendium[data-pack='${ID}.aep'] .directory-list`,
 					title: "Choose an Adventure",
 					content: "Pick an adventure to import into your world.",
 					tooltipDirection: TooltipManager.TOOLTIP_DIRECTIONS.UP,
 				},
 				{
 					id: "importForm",
-					selector: `.adventure-importer.${ID} .import-form`,
+					selector: `.adventure-importer.aep .import-form`,
 					title: "Import Options",
 					content: "Configure the various options for this import.",
 					tooltipDirection: TooltipManager.TOOLTIP_DIRECTIONS.UP,
 				},
 				{
 					id: "import",
-					selector: `.adventure-importer.${ID} button[type='submit']`,
+					selector: `.adventure-importer.aep button[type='submit']`,
 					title: "Import the Adventure!",
 					content: "Just click this button to import the adventure. Happy gaming! 🎉",
 				},
