@@ -1,4 +1,4 @@
-const ID = "aep";
+const ID = "the-sky-isles";
 
 // Logo
 const logo = document.querySelector("img#logo");
