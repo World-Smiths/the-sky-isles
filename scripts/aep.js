@@ -2,7 +2,7 @@ const ID = "the-sky-isles";
 
 // Logo
 const logo = document.querySelector("img#logo");
-logo.src = `modules/${ID}/styles/ws.svg`;
+logo.src = `modules/aep/styles/ws.svg`;
 logo.addEventListener("click", () =>
 	window.open(game.world.data.authors.filter(a => a.name === "World Smiths").map(a => a.url)[0])
 );
